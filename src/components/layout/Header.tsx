@@ -19,6 +19,12 @@ const Header = () => {
         Survey App
       </Link>
 
+      <nav>
+        <ul className='flex gap-4 text-sm'>
+          {navLinks.map(link => <Link to={link.path} key={link.path}>{link.title}</Link>)}
+        </ul>
+      </nav>
+
       <div className="flex">
         <button
           className="border inline-flex items-center rounded px-2 py-1 text-sm hover:bg-white hover:text-slate-600 transition-all"
