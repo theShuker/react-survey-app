@@ -9,7 +9,7 @@ const HOST = import.meta.env.VITE_API_HOST || 'localhost';
  * @returns Promise of json
  */
 const fetcher = <TResponse>(url: string, options?: RequestInit | undefined) => {
-  return fetch(`${PROTOCOL}://${HOST}:${PORT}`, options)
+  return fetch(`${PROTOCOL}://${HOST}:${PORT}${url}`, options)
     .then((res) => res.json())
     .then((data) => data as TResponse);
 };

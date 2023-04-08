@@ -17,10 +17,20 @@ export const createSubmission = async (
   return fetcher<ISubmission>(`/submissions`, {
     ...defaultHeaders,
     method: 'POST',
-    body: JSON.stringify(newSubmission),
+    body: JSON.stringify({ ...newSubmission, surveyId }),
   });
 };
 
-export const deleteSubmission = async (id: string) => {
-  return fetcher<ISubmission>(`/submissions/${id}`, { ...defaultHeaders, method: 'DELETE' });
+export const deleteSubmission = async (submissionId: string) => {
+  return fetcher<ISubmission>(`/submissions/${submissionId}`, {
+    ...defaultHeaders,
+    method: 'DELETE',
+  });
+};
+
+export const deleteSubmissionsFor = async (surveyId: string) => {
+  return fetcher<ISubmission>(`/submissions?surveyId=${surveyId}`, {
+    ...defaultHeaders,
+    method: 'DELETE',
+  });
 };
