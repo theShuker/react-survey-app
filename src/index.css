@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+textarea,
+input[type='text'],
+input[type='number'],
+input[type='email'],
+select {
+  @apply border-[2px] rounded px-2 py-1 w-full;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: 1em;
+  height: 1em;
+}

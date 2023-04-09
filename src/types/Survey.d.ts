@@ -1,3 +1,5 @@
+import { QuestionInputType } from "../components/surveys/viewer/QuestionInput";
+
 export interface ISurvey {
   id: string;
   title: string;
@@ -9,7 +11,8 @@ export interface IQuestion {
   id: string;
   title: string;
   description: string;
-  inputType: 'text';
+  inputType: QuestionInputType;
+  answerOptions: string[] | undefined
 };
 
 export interface ISubmission {

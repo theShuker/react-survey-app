@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/common/Loading';
+import Question from '../../components/surveys/viewer/Question';
 import { useSurvey } from '../../hooks/useSurvey';
 
 const SurveysPage = () => {
@@ -10,12 +11,15 @@ const SurveysPage = () => {
 
   return (
     <main className="p-6">
-      <h1 className="text-4xl">{survey?.title}</h1>
-      <p>{survey?.description}</p>
-      <ul className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-4xl">{survey?.title}</h1>
+        <p>{survey?.description}</p>
+        <small>Consists of {survey?.questions.length} questions</small>
+      </div>
+      <ul className="flex flex-col gap-2 mt-6">
         {survey?.questions.map((q, idx) => (
           <li key={q.id}>
-            Вопрос {idx}: {q.title}
+            <Question question={q} />
           </li>
         ))}
       </ul>
