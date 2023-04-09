@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Loading from '../../components/common/Loading';
-import { useSurvey } from '../../hooks/useSurveyApi';
+import { useSurvey } from '../../hooks/useSurvey';
 
 const SurveysPage = () => {
   let { surveyId } = useParams<'surveyId'>();
