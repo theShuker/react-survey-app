@@ -38,8 +38,16 @@ interface QuestionInputProps {
   answerOptions?: string[];
 }
 
-const QuestionInput = ({ type, ...args }: QuestionInputProps) => {
+const QuestionInput = ({ type, answerOptions, ...args }: QuestionInputProps) => {
   const Input = getInputComponentByType(type);
-  return <Input {...args} />;
+
+  switch (Input) {
+    case RadioInputGroup:
+    case CheckboxInputGroup:
+      return <Input {...{ ...args, answerOptions }} />;
+
+    default:
+      return <Input {...args} />;
+  }
 };
 export default QuestionInput;

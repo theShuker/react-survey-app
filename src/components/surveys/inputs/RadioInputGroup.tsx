@@ -8,7 +8,7 @@ const RadioInputGroup = (props: RadioInputProps) => {
   return (
     <div className='flex flex-col gap-1'>
       {answerOptions.map((answer) => (
-        <RadioInput value={answer} {...rest} />
+        <RadioInput key={answer} value={answer} {...rest} />
       ))}
     </div>
   );

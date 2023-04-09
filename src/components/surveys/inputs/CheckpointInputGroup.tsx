@@ -8,7 +8,7 @@ const CheckboxInputGroup = (props: CheckboxInputProps) => {
   return (
     <div className="flex flex-col gap-1">
       {answerOptions.map((answer) => (
-        <CheckboxInput value={answer} {...rest} />
+        <CheckboxInput key={answer} value={answer} {...rest} />
       ))}
     </div>
   );
