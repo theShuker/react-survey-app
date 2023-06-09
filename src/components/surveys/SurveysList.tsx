@@ -26,6 +26,9 @@ SurveysList.Item = ({ survey, mutate }: { survey: ISurvey; mutate: any }) => (
     <Link to={`/surveys/${survey.id}`} className="bg-slate-200 px-4 py-1 text-sm">
       View
     </Link>
+    <Link to={`/surveys/${survey.id}/results`} className="bg-green-200 px-4 py-1 text-sm">
+      Results
+    </Link>
     <button
       className="bg-red-200 px-4 py-1 text-sm"
       onClick={async () => {

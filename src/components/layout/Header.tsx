@@ -10,6 +10,10 @@ const navLinks = [
     title: 'Surveys',
     path: '/surveys',
   },
+  {
+    title: 'Create new survey',
+    path: '/surveys/create',
+  },
 ];
 
 const Header = () => {
@@ -20,8 +24,12 @@ const Header = () => {
       </Link>
 
       <nav>
-        <ul className='flex gap-4 text-sm'>
-          {navLinks.map(link => <Link to={link.path} key={link.path}>{link.title}</Link>)}
+        <ul className="flex gap-4 text-sm">
+          {navLinks.map((link) => (
+            <Link to={link.path} key={link.path}>
+              {link.title}
+            </Link>
+          ))}
         </ul>
       </nav>
 

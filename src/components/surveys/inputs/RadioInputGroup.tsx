@@ -1,14 +1,17 @@
 import RadioInput from './RadioInput';
 
-type RadioInputProps = { answerOptions: string[] } & React.InputHTMLAttributes<HTMLInputElement>;
+type RadioInputProps = {
+  answerOptions: string[];
+  register: any;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 const RadioInputGroup = (props: RadioInputProps) => {
-  const { answerOptions, ...rest } = props;
+  const { answerOptions, register, ...rest } = props;
 
   return (
-    <div className='flex flex-col gap-1'>
+    <div className="flex flex-col gap-1">
       {answerOptions.map((answer) => (
-        <RadioInput key={answer} value={answer} {...rest} />
+        <RadioInput {...register} key={answer} value={answer} {...rest} />
       ))}
     </div>
   );

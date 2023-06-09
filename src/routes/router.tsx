@@ -3,6 +3,8 @@ import Home from './Home';
 import RootLayout from './RootLayout';
 import SurveysPage from './surveys/SurveysPage';
 import SurveyPage from './surveys/SurveyPage';
+import CreateSurveyPage from './surveys/CreateSurveyPage';
+import SurveyResultsPage from './surveys/SurveyResultsPage';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
           {
             path: ':surveyId',
             element: <SurveyPage />,
+          },
+          {
+            path: ':surveyId/results',
+            element: <SurveyResultsPage />,
+          },
+          {
+            path: 'create',
+            element: <CreateSurveyPage />,
           },
         ],
       },

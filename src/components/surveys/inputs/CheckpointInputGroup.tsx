@@ -1,14 +1,17 @@
 import CheckboxInput from './CheckboxInput';
 
-type CheckboxInputProps = { answerOptions: string[] } & React.InputHTMLAttributes<HTMLInputElement>;
+type CheckboxInputProps = {
+  answerOptions: string[];
+  register: any;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 const CheckboxInputGroup = (props: CheckboxInputProps) => {
-  const { answerOptions, ...rest } = props;
+  const { answerOptions, register, ...rest } = props;
 
   return (
     <div className="flex flex-col gap-1">
       {answerOptions.map((answer) => (
-        <CheckboxInput key={answer} value={answer} {...rest} />
+        <CheckboxInput {...register} key={answer} value={answer} {...rest} />
       ))}
     </div>
   );

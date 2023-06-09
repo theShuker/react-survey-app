@@ -15,6 +15,8 @@ export const getSurvey = async (id: string) => {
 };
 
 export const createSurvey = async (newSurvey: Omit<ISurvey, 'id'>) => {
+  newSurvey.questions.forEach((q) => (q.id = crypto.randomUUID()));
+
   return fetcher<ISurvey>(`/surveys`, {
     ...defaultHeaders,
     method: 'POST',

@@ -36,18 +36,19 @@ const getInputComponentByType = (inputType: QuestionInputType): React.ElementTyp
 interface QuestionInputProps {
   type: QuestionInputType;
   answerOptions?: string[];
+  register?: any;
 }
 
-const QuestionInput = ({ type, answerOptions, ...args }: QuestionInputProps) => {
+const QuestionInput = ({ type, answerOptions, register, ...args }: QuestionInputProps) => {
   const Input = getInputComponentByType(type);
 
   switch (Input) {
     case RadioInputGroup:
     case CheckboxInputGroup:
-      return <Input {...{ ...args, answerOptions }} />;
+      return <Input {...{ ...args, register, answerOptions }} />;
 
     default:
-      return <Input {...args} />;
+      return <Input {...{ ...args, ...register }} />;
   }
 };
 export default QuestionInput;

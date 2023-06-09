@@ -11,13 +11,12 @@ export const getSubmissions = async (surveyId: string) => {
 };
 
 export const createSubmission = async (
-  surveyId: string,
   newSubmission: Omit<ISubmission, 'id'>
 ) => {
   return fetcher<ISubmission>(`/submissions`, {
     ...defaultHeaders,
     method: 'POST',
-    body: JSON.stringify({ ...newSubmission, surveyId }),
+    body: JSON.stringify({ ...newSubmission }),
   });
 };
 

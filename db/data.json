@@ -6,33 +6,177 @@
       "description": "This is an example of survey record",
       "questions": [
         {
-          "id": 1,
+          "id": "1",
           "title": "What is your name?",
           "description": "Specify your name here please...",
           "inputType": "text"
         },
         {
-          "id": 2,
+          "id": "2",
           "title": "Do you like cats ?",
           "description": "Tell us how much you do!",
           "inputType": "textarea"
         },
         {
-          "id": 3,
+          "id": "3",
           "title": "How much paws do cats have?",
           "description": "",
           "inputType": "radio",
-          "answerOptions": ["8", "2", "4"]
+          "answerOptions": [
+            "8",
+            "2",
+            "4"
+          ]
         },
         {
-          "id": 4,
+          "id": "4",
           "title": "Blah?",
           "description": "wut",
           "inputType": "checkbox",
-          "answerOptions": ["yeah", "nope", "maybe"]
+          "answerOptions": [
+            "yeah",
+            "nope",
+            "maybe"
+          ]
         }
       ]
+    },
+    {
+      "questions": [
+        {
+          "title": "first",
+          "description": "asd",
+          "inputType": "text",
+          "id": "30be0d3a-6775-4be3-bd0e-6b8566f1c963"
+        },
+        {
+          "title": "second",
+          "description": "asddds",
+          "inputType": "textarea",
+          "id": "053d2f72-45ae-43b3-9a2c-e53c18223aac"
+        },
+        {
+          "title": "third",
+          "description": "",
+          "inputType": "radio",
+          "answerOptions": [
+            "one",
+            "two"
+          ],
+          "id": "d49d00cd-007c-4243-8575-1a06248bc5ca"
+        },
+        {
+          "title": "fourth",
+          "description": "asdas",
+          "inputType": "checkbox",
+          "answerOptions": [
+            "meow",
+            "woof"
+          ],
+          "id": "929c5a51-125e-4565-b9cd-31265343d016"
+        }
+      ],
+      "title": "Demo",
+      "description": "123",
+      "id": 2
     }
   ],
-  "submissions": []
+  "submissions": [
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "asdn ajsdnsa",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "sdkfjnsdjdfnsdnf"
+      },
+      "id": 1
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "asdn ajsdnsa",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "sdkfjnsdjdfnsdnf"
+      },
+      "id": 2
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "test",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "test"
+      },
+      "id": 3
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": ""
+      },
+      "id": 4
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": ""
+      },
+      "id": 5
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": ""
+      },
+      "id": 6
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "asd"
+      },
+      "id": 7
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "asd"
+      },
+      "id": 8
+    },
+    {
+      "surveyId": "1",
+      "answers": {
+        "1": "Kirill",
+        "2": "yas"
+      },
+      "id": 9
+    },
+    {
+      "surveyId": "2",
+      "answers": {
+        "30be0d3a-6775-4be3-bd0e-6b8566f1c963": "test",
+        "053d2f72-45ae-43b3-9a2c-e53c18223aac": "test"
+      },
+      "id": 10
+    },
+    {
+      "surveyId": "1",
+      "answers": {
+        "1": "",
+        "2": ""
+      },
+      "id": 11
+    },
+    {
+      "surveyId": "1",
+      "answers": {
+        "1": "",
+        "2": ""
+      },
+      "id": 12
+    }
+  ]
 }
